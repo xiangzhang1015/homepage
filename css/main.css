@@ -4483,3 +4483,34 @@ dl.accordion.time-line:before {
 }
 
 /*-------- end footer Area -------------*/
+
+details {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+details p {
+  padding: 20px;
+}
+
+summary {
+  padding: 12px;
+  background-color: #52a9ce4a;
+  border: 1px solid #fcfdfe;
+  outline: none;
+}
+
+summary:hover,
+summary:focus {
+  border: 1px solid rgba(119, 136, 153, 0.316);
+}
+
+details[open] summary {
+  background-color: rgba(119, 136, 153, 0.417);
+  border: 1px solid rgba(119, 136, 153, 0.419);
+}
+
+details[open] {
+  background: #fff;
+}
+
