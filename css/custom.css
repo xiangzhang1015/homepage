@@ -1,0 +1,216 @@
+/* =============================================
+   Custom overrides — differentiates from base Colorlib template
+   ============================================= */
+
+/* Publication lists — matches body text style, prefixed C/J/B labels */
+.pub-list {
+    padding-left: 0;
+    margin-bottom: 0;
+    counter-reset: pub-counter;
+}
+.pub-list li {
+    list-style: none;
+    counter-increment: pub-counter;
+    color: #555;
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.82em;
+    margin-bottom: 0.9em;
+    padding-left: 3em;
+    position: relative;
+}
+.pub-list li::before {
+    position: absolute;
+    left: 0;
+    font-weight: 600;
+    color: #1c2e4a;
+    width: 2.8em;
+}
+.conf-list li::before { content: "[C" counter(pub-counter) "]"; }
+.jour-list li::before { content: "[J" counter(pub-counter) "]"; }
+.book-list li::before { content: "[B" counter(pub-counter) "]"; }
+.abs-list  li::before { content: "[A" counter(pub-counter) "]"; }
+.pub-list li em {
+    color: #555;
+    font-weight: 300;
+}
+.pub-list li strong {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Highlighted venue names for top journals and A* conferences */
+.venue-hl {
+    font-weight: 700;
+    font-size: 1.1em;
+    color: #1c2e4a;
+}
+
+/* Publication link badges */
+.pub-links {
+    font-size: 13px;
+    color: #666;
+    margin-left: 5px;
+    white-space: nowrap;
+}
+.pub-links a {
+    color: #2563a0;
+    text-decoration: none;
+}
+.pub-links a:hover {
+    text-decoration: underline;
+}
+
+/* --- Nav & Header --- */
+#header {
+    background: #1c2e4a;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+.nav-menu > li > a {
+    color: #d6e4f0 !important;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.nav-menu > li > a:hover,
+.nav-menu > li.active > a {
+    color: #7ec8e3 !important;
+}
+
+/* --- Banner / page hero --- */
+.about-banner,
+.relative.about-banner {
+    background: #1c2e4a !important;
+}
+
+/* --- Links --- */
+a {
+    color: #2563a0;
+}
+a:hover {
+    color: #1a3f6e;
+    text-decoration: underline;
+}
+
+/* --- Content bullets — disc style matching news items, across all tabs --- */
+.whole-wrap .unordered-list {
+    padding-left: 1.2rem;
+    list-style: disc;
+}
+.whole-wrap .unordered-list li {
+    list-style: disc;
+    padding-left: 0.3rem;
+    color: #3a3a3a;
+    line-height: 1.6 !important;
+    margin-bottom: 6px;
+}
+.whole-wrap .unordered-list li::before {
+    display: none;
+}
+.whole-wrap .unordered-list li strong {
+    font-weight: 600;
+    color: #333;
+}
+
+/* --- Consistent spacing before section and sub-section headings --- */
+.section-top-border div + h3,
+.section-top-border div + a + h3,
+.section-top-border div + h5 {
+    margin-top: 2.5rem;
+}
+.section-top-border h3 + h5 {
+    margin-top: 1.2rem;
+}
+
+/* --- Section headings --- */
+.section-top-border h3,
+.whole-wrap h3 {
+    color: #1c2e4a;
+    border-bottom: 2px solid #7ec8e3;
+    padding-bottom: 6px;
+    display: inline-block;
+}
+
+/* =============================================
+   News timeline
+   ============================================= */
+.news-timeline {
+    margin-top: 8px;
+}
+
+.news-year-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 1.4rem;
+}
+
+.news-year-tag {
+    flex-shrink: 0;
+    background: #1c2e4a;
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 3px 11px;
+    border-radius: 3px;
+    letter-spacing: 0.04em;
+    margin-top: 2px;
+    min-width: 46px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.news-items {
+    margin: 0;
+    padding-left: 1.1rem;
+    list-style: disc;
+    flex: 1;
+}
+
+.news-items li {
+    font-size: 15px;
+    color: #3a3a3a;
+    margin-bottom: 5px;
+    line-height: 1.55;
+}
+
+/* Collapsible earlier news */
+.news-earlier summary {
+    cursor: pointer;
+    color: #2563a0;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    user-select: none;
+}
+
+.news-earlier summary:hover {
+    color: #1a3f6e;
+}
+
+/* --- Publication cards on home page --- */
+.card {
+    border: 1px solid #dce8f2;
+    border-radius: 6px;
+    transition: box-shadow 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 16px rgba(28,46,74,0.13);
+}
+
+.card-footer {
+    background: #f0f6fb;
+    border-top: 1px solid #dce8f2;
+}
+
+/* --- Footer --- */
+.footer-area {
+    background: #f5f8fa;
+    border-top: 1px solid #dce8f2;
+}
+
+.footer-text {
+    color: #7a8fa6;
+    font-size: 0.85rem;
+}
