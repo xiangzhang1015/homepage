@@ -204,6 +204,25 @@ a:hover {
     border-top: 1px solid #dce8f2;
 }
 
+/* Uniform figure frame so titles line up across cards */
+.card-deck .card-img-top {
+    height: 210px;
+    object-fit: contain;
+    padding: 18px 16px;
+    background: #fff;
+    border-bottom: 1px solid #edf2f7;
+    border-radius: 6px 6px 0 0;
+}
+
+.card-deck .card-body {
+    padding: 1.4rem 1.25rem 1.1rem;
+}
+
+.card-deck .card-title {
+    line-height: 1.35;
+    margin-bottom: 0.9rem;
+}
+
 /* --- Footer --- */
 .footer-area {
     background: #f5f8fa;
